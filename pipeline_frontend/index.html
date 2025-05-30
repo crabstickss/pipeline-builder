@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Конструктор аналитических пайплайнов</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="main-heading">
+             Конструктор аналитических пайплайнов
+        </h1>
+    <p class="sub-heading">
+  Выберите отрасль и цель анализа, чтобы получить<br>
+  готовый пайплайн с подходящими инструментами и источниками данных
+    </p>
+        <form id="recommendationForm">
+            <label for="goalSelect">Цель анализа:</label>
+            <select name="goal_id" id="goalSelect" required></select>
+
+            <label for="industry">Отрасль:</label>
+            <select name="industry" id="industry" required></select>
+
+            <label for="scale">Масштаб бизнеса:</label>
+            <select name="scale" id="scale" required>
+                <option value="Малый">Малый</option>
+                <option value="Средний">Средний</option>
+                <option value="Крупный">Крупный</option>
+            </select>
+            <label for="sources">Источники данных:</label>
+            <div id="sourcesContainer" class="sources-grid"></div>
+
+            <label for="budget">Бюджет:</label>
+            <select name="budget_level" id="budget" required>
+                <option value=" Низкий">Низкий</option>
+                <option value="Средний">Средний</option>
+                <option value="Высокий">Высокий</option>
+
+            </select>
+
+            <button type="submit">Получить рекомендации</button>
+        </form>
+
+        <div id="results" class="hidden" style="margin-top: 2em;">
+            <h2>Инструменты:</h2>
+            <ul id="toolsList"></ul>
+
+            <h2>Источники данных:</h2>
+            <ul id="sourcesList"></ul>
+
+            <h2>Этапы анализа:</h2>
+            <ul id="blocksList"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
