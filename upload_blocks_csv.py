@@ -24,4 +24,4 @@ conn.commit()
 cur.close()
 conn.close()
 
-print("✅ Данные загружены успешно!")
+print(" Данные загружены успешно!")
